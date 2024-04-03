@@ -6,4 +6,4 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 var marker = L.marker([-43.531111, 172.636667]).addTo(map);
-marker.bindPopup("<h2>Hello world!</h2><br>I am a popup.").openPopup();
+marker.bindPopup("<h2>Hey you! Zoom in and discover Christchurch</h2><br>I am a popup.").openPopup();
