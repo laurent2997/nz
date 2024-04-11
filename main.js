@@ -2,7 +2,7 @@ let lat=-43.531111;
 let long=172.636667;
 let zoom=11;
 
-let map2 = L.map('map').setView([lat,long], zoom);
+
 let map = L.map('map', {
     center: [lat,long],
     zoom: zoom
