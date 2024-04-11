@@ -10,7 +10,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 let marker = L.marker([lat,long]).addTo(map);
-marker.bindPopup("<h2>Hey you! Zoom in and discover Christchurch</h2><br>I am a popup.").openPopup();
+marker.bindPopup(`
+    <h2>Hey you! Zoom in and discover Christchurch</h2>
+    <ul>
+        <li>Breite: </li>
+        <li>Länge: </li>
+    </ul>
+`).openPopup();
 
 
 
