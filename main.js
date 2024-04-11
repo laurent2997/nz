@@ -13,8 +13,8 @@ let marker = L.marker([lat,long]).addTo(map);
 marker.bindPopup(`
     <h2>Hey you! Zoom in and discover Christchurch</h2>
     <ul>
-        <li>Breite: </li>
-        <li>Länge: </li>
+        <li>Breite:${lat} </li>
+        <li>Länge: ${long}</li>
     </ul>
 `).openPopup();
 
