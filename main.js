@@ -25,6 +25,17 @@ L.control.scale({
     imperial:false
 }).addTo(map);
 
+let jsonPunkt = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [long, lat]
+    },
+    "properties": {
+      "name": "Christchurch"
+    }
+  }
+
 
 
 
