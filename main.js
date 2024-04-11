@@ -1,3 +1,6 @@
+let lat=-43.531111;
+let long=172.636667;
+
 let map = L.map('map').setView([-43.531111,172.636667], 11);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
