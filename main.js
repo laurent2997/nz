@@ -12,14 +12,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-let marker = L.marker([lat, long]).addTo(map);
-marker.bindPopup(`
-    <h2>Hey you! Zoom in and discover Christchurch</h2>
-    <ul>
-        <li>Breite: ${lat.toFixed(5)} </li>
-        <li>Länge: ${long.toFixed(5)} </li>
-    </ul>
-`).openPopup();
 
 L.control.scale({
     imperial: false
@@ -36,12 +28,14 @@ let jsonPunkt = {
     }
 }
 
-L.geoJSON(jsonPunkt, {
-    style: function (feature) {
-        return {color: feature.properties.color};
-    }
-}).bindPopup(function (layer) {
-    return layer.feature.properties.description;
+L.geoJSON(jsonPunkt, {}).bindPopup(function (layer) {
+    return `
+    <h2>${layer.feature.properties.name}</h2>
+    <ul>
+        <li>Breite: ${layer.feature.geometry.coordinates[1].toFixed(5)} </li>
+        <li>Länge: ${layer.feature.geometry.coordinates[0].toFixed(5)} </li>
+    </ul>
+    `;
 }).addTo(map);
 
 
@@ -52,10 +46,10 @@ L.geoJSON(jsonPunkt, {
 
 
 
-
+/*
 //marker anzeigen
 console.log(marker);
-
+*/
 /*
 let age =10;
 console.log(age)
