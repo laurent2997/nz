@@ -16,4 +16,12 @@ let age =10;
 console.log(age)
 */
 
-console.log(`Test`);
+let absatz = "Hallo Welt!";
+
+console.log(`
+<h3>Test fürs "Tutorial"</h3>
+<p>${absatz}</p>
+<p>Nummer plus 1 = ${nummer+1} </p>
+<div id="map"></div>
+`);
+
